@@ -1,0 +1,57 @@
+=================================================================
+==42==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x04d00000 at pc 0x00057169 bp 0x0288c790 sp 0x0288c794
+WRITE of size 2097152 at 0x04d00000 thread T0
+    #0 0x57169 in wasm-function[2586]+0x57169 (REDACTED/emsdk-check/out-3.1.74-false-10-mimalloc-address.js+0x57169)
+    #1 0x6548e in wasm-function[2862]+0x6548e (REDACTED/emsdk-check/out-3.1.74-false-10-mimalloc-address.js+0x6548e)
+    #2 0x65788 in wasm-function[2868]+0x65788 (REDACTED/emsdk-check/out-3.1.74-false-10-mimalloc-address.js+0x65788)
+    #3 0x65b38 in wasm-function[2880]+0x65b38 (REDACTED/emsdk-check/out-3.1.74-false-10-mimalloc-address.js+0x65b38)
+    #4 0x68ee1 in wasm-function[2975]+0x68ee1 (REDACTED/emsdk-check/out-3.1.74-false-10-mimalloc-address.js+0x68ee1)
+    #5 0x68f9d in wasm-function[2976]+0x68f9d (REDACTED/emsdk-check/out-3.1.74-false-10-mimalloc-address.js+0x68f9d)
+    #6 0x4ec29 in wasm-function[2505]+0x4ec29 (REDACTED/emsdk-check/out-3.1.74-false-10-mimalloc-address.js+0x4ec29)
+
+Address 0x04d00000 is a wild pointer inside of access range of size 0x00200000.
+SUMMARY: AddressSanitizer: heap-buffer-overflow (REDACTED/emsdk-check/out-3.1.74-false-10-mimalloc-address.js+0x57165) in wasm-function[2586]+0x57165
+Shadow bytes around the buggy address:
+  0x04cffd80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x04cffe00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x04cffe80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x04cfff00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x04cfff80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x04d00000:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x04d00080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x04d00100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x04d00180: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x04d00200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x04d00280: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==42==ABORTING
+node:internal/process/promises:392
+      new UnhandledPromiseRejection(reason);
+      ^
+
+UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "#<ExitStatus>".
+    at throwUnhandledRejectionsMode (node:internal/process/promises:392:7)
+    at processPromiseRejections (node:internal/process/promises:475:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:106:32) {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+
+Node.js v22.12.0

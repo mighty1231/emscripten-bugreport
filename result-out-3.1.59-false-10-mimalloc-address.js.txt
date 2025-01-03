@@ -1,0 +1,33 @@
+softplus: {0, 0}
+hardsigmoid: {1, 1}
+scaledtanh: {1, 1}
+relu: {0, 0}
+tanh: {0, 0}
+elu: {1, 0}
+thresholdedrelu: {1, 0}
+softsign: {0, 0}
+sigmoid: {0, 0}
+leakyrelu: {1, 0}
+
+=================================================================
+==42==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 16 byte(s) in 1 object(s) allocated from:
+    #0 0x54124 in wasm-function[2539]+0x54124 (REDACTED/emsdk-check/out-3.1.59-false-10-mimalloc-address.js+0x54124)
+    #1 0x45f84 in wasm-function[2288]+0x45f84 (REDACTED/emsdk-check/out-3.1.59-false-10-mimalloc-address.js+0x45f84)
+    #2 0x45f60 in wasm-function[2287]+0x45f60 (REDACTED/emsdk-check/out-3.1.59-false-10-mimalloc-address.js+0x45f60)
+    #3 0x26fff in wasm-function[940]+0x26fff (REDACTED/emsdk-check/out-3.1.59-false-10-mimalloc-address.js+0x26fff)
+    #4 0x26fed in wasm-function[938]+0x26fed (REDACTED/emsdk-check/out-3.1.59-false-10-mimalloc-address.js+0x26fed)
+    #5 0x26fbb in wasm-function[934]+0x26fbb (REDACTED/emsdk-check/out-3.1.59-false-10-mimalloc-address.js+0x26fbb)
+    #6 0x26f19 in wasm-function[925]+0x26f19 (REDACTED/emsdk-check/out-3.1.59-false-10-mimalloc-address.js+0x26f19)
+
+Direct leak of 8 byte(s) in 1 object(s) allocated from:
+    #0 0x54124 in wasm-function[2539]+0x54124 (REDACTED/emsdk-check/out-3.1.59-false-10-mimalloc-address.js+0x54124)
+    #1 0x45f84 in wasm-function[2288]+0x45f84 (REDACTED/emsdk-check/out-3.1.59-false-10-mimalloc-address.js+0x45f84)
+    #2 0x45f60 in wasm-function[2287]+0x45f60 (REDACTED/emsdk-check/out-3.1.59-false-10-mimalloc-address.js+0x45f60)
+    #3 0xc340 in wasm-function[200]+0xc340 (REDACTED/emsdk-check/out-3.1.59-false-10-mimalloc-address.js+0xc340)
+    #4 0xc242 in wasm-function[196]+0xc242 (REDACTED/emsdk-check/out-3.1.59-false-10-mimalloc-address.js+0xc242)
+    #5 0xdd7c in wasm-function[223]+0xdd7c (REDACTED/emsdk-check/out-3.1.59-false-10-mimalloc-address.js+0xdd7c)
+    #6 0xd8db in wasm-function[215]+0xd8db (REDACTED/emsdk-check/out-3.1.59-false-10-mimalloc-address.js+0xd8db)
+
+SUMMARY: AddressSanitizer: 24 byte(s) leaked in 2 allocation(s).

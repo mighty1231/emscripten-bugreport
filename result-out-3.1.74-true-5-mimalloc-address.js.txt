@@ -1,0 +1,16 @@
+wasm://wasm/00224266:1
+
+
+RuntimeError: remainder by zero
+    at wasm://wasm/00224266:wasm-function[316]:0x1468a
+    at wasm://wasm/00224266:wasm-function[319]:0x14854
+    at wasm://wasm/00224266:wasm-function[877]:0x28e62
+    at wasm://wasm/00224266:wasm-function[875]:0x28e4c
+    at wasm://wasm/00224266:wasm-function[872]:0x28e2e
+    at wasm://wasm/00224266:wasm-function[869]:0x28df8
+    at wasm://wasm/00224266:wasm-function[865]:0x28da3
+    at wasm://wasm/00224266:wasm-function[2304]:0x4a50e
+    at wasm://wasm/00224266:wasm-function[35]:0x285a
+    at wasm://wasm/00224266:wasm-function[248]:0x132d3
+
+Node.js v22.12.0

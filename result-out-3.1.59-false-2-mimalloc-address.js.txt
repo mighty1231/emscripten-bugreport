@@ -1,0 +1,16 @@
+leakyrelu: {1, 0}
+relu: {0, 0}
+
+=================================================================
+==42==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 24 byte(s) in 1 object(s) allocated from:
+    #0 0x5378d in wasm-function[2539]+0x5378d (REDACTED/emsdk-check/out-3.1.59-false-2-mimalloc-address.js+0x5378d)
+    #1 0x455ed in wasm-function[2288]+0x455ed (REDACTED/emsdk-check/out-3.1.59-false-2-mimalloc-address.js+0x455ed)
+    #2 0x455c9 in wasm-function[2287]+0x455c9 (REDACTED/emsdk-check/out-3.1.59-false-2-mimalloc-address.js+0x455c9)
+    #3 0xb9a9 in wasm-function[200]+0xb9a9 (REDACTED/emsdk-check/out-3.1.59-false-2-mimalloc-address.js+0xb9a9)
+    #4 0xb8ab in wasm-function[196]+0xb8ab (REDACTED/emsdk-check/out-3.1.59-false-2-mimalloc-address.js+0xb8ab)
+    #5 0xb568 in wasm-function[188]+0xb568 (REDACTED/emsdk-check/out-3.1.59-false-2-mimalloc-address.js+0xb568)
+    #6 0x94e5 in wasm-function[154]+0x94e5 (REDACTED/emsdk-check/out-3.1.59-false-2-mimalloc-address.js+0x94e5)
+
+SUMMARY: AddressSanitizer: 24 byte(s) leaked in 1 allocation(s).

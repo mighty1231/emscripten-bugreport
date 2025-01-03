@@ -1,0 +1,5 @@
+leakyrelu: {1, 0}
+relu: {0, 0}
+scaledtanh: {1, 1}
+tanh: {0, 0}
+thresholdedrelu: {1, 0}

@@ -1,0 +1,10 @@
+softplus: {0, 0}
+hardsigmoid: {1, 1}
+scaledtanh: {1, 1}
+relu: {0, 0}
+tanh: {0, 0}
+elu: {1, 0}
+thresholdedrelu: {1, 0}
+softsign: {0, 0}
+sigmoid: {0, 0}
+leakyrelu: {1, 0}

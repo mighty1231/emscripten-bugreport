@@ -1,0 +1,2 @@
+leakyrelu: {1, 0}
+relu: {0, 0}

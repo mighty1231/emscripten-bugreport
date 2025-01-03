@@ -1,0 +1,18 @@
+leakyrelu: {1, 0}
+relu: {0, 0}
+wasm://wasm/0021ce1a:1
+
+
+RuntimeError: remainder by zero
+    at wasm://wasm/0021ce1a:wasm-function[343]:0x121ed
+    at wasm://wasm/0021ce1a:wasm-function[346]:0x123b7
+    at wasm://wasm/0021ce1a:wasm-function[234]:0xe654
+    at wasm://wasm/0021ce1a:wasm-function[232]:0xe5ae
+    at wasm://wasm/0021ce1a:wasm-function[230]:0xe507
+    at wasm://wasm/0021ce1a:wasm-function[245]:0xecc9
+    at wasm://wasm/0021ce1a:wasm-function[242]:0xec06
+    at wasm://wasm/0021ce1a:wasm-function[246]:0xee4c
+    at wasm://wasm/0021ce1a:wasm-function[50]:0x3adf
+    at wasm://wasm/0021ce1a:wasm-function[49]:0x39e7
+
+Node.js v22.12.0

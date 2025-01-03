@@ -42,7 +42,7 @@ function construct_args(emsdkVersion, useUnorder, dataSize, mallocType, sanitize
     '-sINITIAL_MEMORY=200mb'
   ];
 
-  if (!useUnorder) {
+  if (!useUnorder) { // little bit confused, but I have run this code. the variable name should be changed into useOrder
     args.push('-DUSE_UNORDER')
   }
   args.push(`-DDATA_${dataSize}`);
